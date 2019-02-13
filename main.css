@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    background: url("./static/background.jpg") no-repeat;
+    background-size: cover;
+}
+
+main div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin: 0 auto;
+    padding: 10px;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    overflow: auto;
+}
+
+article {
+    max-width: 80%;
+    width: fit-content;
+    margin-bottom: 5px;
+    align-self: flex-start;
+}
+
+article:last-of-type {
+    margin-bottom: 0;
+}
+
+article p {
+    float: left;
+    padding: 2px;
+    margin-bottom: 2px;
+    width: fit-content;
+    background-color: #fff;
+
+    border-radius: 5px 5px 5px 0;
+
+    position: relative;
+}
+
+article p:last-of-type:after {
+    content: '';
+    display: block;
+
+    position: absolute;
+    left: -10px;
+    bottom: 0;
+
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 0 solid transparent;
+
+    border-right: 10px solid #fff;
+}
+
+article p + p {
+    border-radius: 0 5px 5px 0;
+}
+
+article.currentUser {
+    align-self: flex-end;
+}
+
+article.currentUser p {
+    float: right;
+    border-radius: 5px 5px 0 5px;
+}
+
+article.currentUser p + p {
+    border-radius: 5px 0 0 5px;
+}
+
+article.currentUser p:last-of-type:after {
+    left: unset;
+    right: -10px;
+
+    border-right: unset;
+    border-left: 10px solid #fff;
+}

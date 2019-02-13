@@ -1,0 +1,17 @@
+{
+  "name": "fum",
+  "version": "1.0.0",
+  "description": "Messanger",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run server",
+    "server": "python ./server/server.py",
+    "init": "python project-init.py"
+  },
+  "author": "Oleksandr Kozlov",
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "^10.1.2"
+  }
+}
